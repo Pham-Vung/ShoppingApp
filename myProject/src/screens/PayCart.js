@@ -39,57 +39,23 @@ export default function CheckoutScreen({ route, navigation }) {
   const renderOrderSummary = () => {
     return (
       <View style={styles.orderSummaryContainer}>
-        <Text style={styles.orderSummaryTitle}>Thông tin đơn hàng</Text>
-        <View style={styles.orderInfoContainer}>
-          <View style={{ flexDirection: 'row' }}>
-            <View>
-              <Text style={styles.orderInfoLabel}>Họ và tên:</Text>
-            </View>
-            <View>
-              <Text style={styles.orderInfoValue}>{customerName}</Text>
-            </View>
-
-          </View>
-          <View style={{ flexDirection: 'row' }}>
-            <View>
-              <Text style={styles.orderInfoLabel}>Địa chỉ:</Text>
-            </View>
-            <View>
-              <Text style={styles.orderInfoValue}>{billingAddress}</Text>
-            </View>
-
-          </View>
-          <View style={{ flexDirection: 'row' }}>
-            <View>
-              <Text style={styles.orderInfoLabel}>Số điện thoại:</Text>
-            </View>
-            <View>
-              <Text style={styles.orderInfoValue}>{phoneNumber}</Text>
-            </View>
-
-          </View>
-
-        </View>
         <View style={{
           justifyContent: "center",
           alignItems: 'center',
           marginBottom: 15,
         }}>
-          {/* <Text >---------------------------------------------------------------------</Text> */}
         </View>
-
         {cartItems.map(item => (
           <View key={item.id} style={styles.orderItem}>
             <View style={{ flexDirection: 'row' }}>
-              <View>
+              <View style={{flex: 5}}>
                 <Text style={styles.orderItemName}>{item.name}</Text>
                 <Text style={styles.orderItemQuantity}>Số lượng: {item.quantity}</Text>
               </View>
-              <View>
+              <View style={{flex: 3}}>
                 <Image source={{ uri: item.image }} style={styles.image} />
               </View>
             </View>
-
             <Text style={styles.orderItemPrice}>Giá: {formatNumberWithDot(parseFloat(item.price.replace(/\./g, '')) * item.quantity)} VNĐ</Text>
           </View>
         ))}
@@ -168,7 +134,7 @@ export default function CheckoutScreen({ route, navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E5F3FE',
+    //paddingVertical: 10
   },
   body: {
     flex: 1,
@@ -194,11 +160,10 @@ const styles = StyleSheet.create({
     height: 44,
     backgroundColor: '#fff',
     borderWidth: 2,
-    borderColor: '#21a3d0',
+    borderColor: 'gray',
     borderRadius: 15,
     paddingHorizontal: 20,
     paddingVertical: 10,
-    color: '#000000',
   },
   orderSummaryTitle: {
     fontSize: 18,

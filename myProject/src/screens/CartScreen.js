@@ -8,7 +8,7 @@ import Icons from 'react-native-vector-icons/AntDesign'
 export default function CartScreen({ route, navigation }) {
   const item = route.params ? route.params.item : null;
   const [cartItems, setCartItems] = useState([]);
-  
+
   const addToCart = async (productToAdd) => {
     const existingProduct = cartItems.find(
       (item) => item.id === productToAdd.id
@@ -66,11 +66,7 @@ export default function CartScreen({ route, navigation }) {
       </View>
       <View style={styles.delete}>
         <TouchableOpacity onPress={() => removeFromCart(item.id)}>
-          <Icons name='delete'
-            size={25}
-            color='black'>
-
-          </Icons>
+          <Text>Xóa</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -168,7 +164,7 @@ const styles = StyleSheet.create({
     marginLeft: 20
   },
   item: {
-    backgroundColor: '#f9c2ff',
+    backgroundColor: 'white',
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 10,
@@ -224,5 +220,13 @@ const styles = StyleSheet.create({
   delete: {
     marginTop: 55,
     marginRight: 50,
+    width: 40,
+    height: 30,
+    backgroundColor: 'white',
+    borderRadius: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: 'gray',
+    borderWidth: 1
   }
 });

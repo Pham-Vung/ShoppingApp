@@ -56,29 +56,13 @@ const HomeScreen = ({ navigation }) => {
                 </TouchableOpacity>
             </View>
         </View>
-        <View style={{ marginLeft: 20, marginTop: 20, flexDirection: 'row' }}>
-
-            <View style={styles.box_header}>
-                <TouchableOpacity>
-                    <Text style={{ fontSize: 17, fontWeight: 'bold', }}>
-                        Tất cả các sản phẩm
-                    </Text>
-                </TouchableOpacity>
-            </View>
-
-            <View style={styles.box_header}>
-                <TouchableOpacity onPress={() => {
-                    navigation.navigate('Categoris')
-                }}>
-                    <Text style={{ fontSize: 17, fontWeight: 'bold' , textAlign:'center'}}>
-                        Phân Loại
-                    </Text>
-                </TouchableOpacity>
-            </View>
+        <View style={{ marginLeft: 20, marginTop: 20, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', backgroundColor: '#E5F3FE' }}>
+            <Text style={{ fontSize: 17, fontWeight: 'bold', }}>
+                Tất cả các sản phẩm
+            </Text>
         </View>
         <Products></Products>
     </View>
-
 }
 
 const styles = StyleSheet.create({

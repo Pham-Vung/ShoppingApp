@@ -24,7 +24,6 @@ import DanhGia from './src/screens/more/DanhGia'
 import ThongBao from './src/screens/more/ThongBao'
 import BillDetail from './src/screens/more/BillDetail'
 import TinNhan from './src/screens/more/TinNhan'
-import Category from './src/components/Category'
 
 const Stack = createStackNavigator()
 

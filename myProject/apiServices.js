@@ -35,6 +35,7 @@ export const registerUser = async (name, email, password, phone) => {
         } else {
             throw new Error(error.message)
         }
+
     }
 }
 
@@ -54,10 +55,9 @@ export const resetPassword = async (email, newpassword, confirmpassword) => {
         } else {
             throw new Error(error.message)
         }
+
     }
 }
-
-
 export const getAllProducts = async () => {
     try {
         const token = await AsyncStorage.getItem('token');
