@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
+    "@react-native-community/checkbox": "^0.5.17",
+    "expo-checkbox": "^2.7.0",
+    "react-native-check-box": "^2.1.7",
+    "react-native-native": "^1.0.0",
+    "react-native-paper": "^5.12.3"
+  }
+}
